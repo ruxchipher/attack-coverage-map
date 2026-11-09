@@ -216,7 +216,7 @@ def build_html(
         "the number of independent detections behind a technique, which is the "
         "number worth growing. Built by "
         '<a href="https://ruxchipher.com">ruxchipher</a> &middot; '
-        '<a href="https://github.com/Siddique-12300983/attack-coverage-map">'
+        '<a href="https://github.com/ruxchipher/attack-coverage-map">'
         "attack-coverage-map</a>.</p>"
     )
     parts.append("</div></body></html>")

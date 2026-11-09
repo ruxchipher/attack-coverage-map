@@ -4,7 +4,7 @@ Reads my Sigma rules and my detection tools, works out which MITRE ATT&CK
 techniques they actually cover, and writes three things: a readable report, an
 ATT&CK Navigator layer, and a self-contained HTML heatmap.
 
-**Live heatmap: https://siddique-12300983.github.io/attack-coverage-map/**
+**Live heatmap: https://ruxchipher.github.io/attack-coverage-map/**
 
 Pure Python standard library. No PyYAML, no install step, no network access.
 
@@ -36,7 +36,7 @@ most is not the coverage, it is the gap list.
 None. Python 3.9 or newer.
 
 ```sh
-git clone https://github.com/Siddique-12300983/attack-coverage-map.git
+git clone https://github.com/ruxchipher/attack-coverage-map.git
 cd attack-coverage-map
 python3 -m coveragemap --sigma samples/sigma
 ```
@@ -152,7 +152,7 @@ techniques with no detection are coloured red.
 requests, no CDN. Tactics run across as columns in kill-chain order, techniques
 stack underneath shaded by depth, and gaps are drawn as dashed red cells. The
 copy in [`docs/`](docs/) is published at
-[siddique-12300983.github.io/attack-coverage-map](https://siddique-12300983.github.io/attack-coverage-map/).
+[ruxchipher.github.io/attack-coverage-map](https://ruxchipher.github.io/attack-coverage-map/).
 
 ## The inventory format
 
@@ -166,7 +166,7 @@ detections go in a JSON file:
       "name": "Kerberoasting: RC4 service ticket request",
       "kind": "tool",
       "repo": "log-analyzer",
-      "url": "https://github.com/Siddique-12300983/log-analyzer",
+      "url": "https://github.com/ruxchipher/log-analyzer",
       "level": "high",
       "logsource": "windows/security 4769",
       "techniques": ["T1558.003"],
@@ -182,17 +182,17 @@ on, so two rules in the same repo do not look like two independent detections.
 
 [`inventory/ruxchipher-detections.json`](inventory/ruxchipher-detections.json)
 is my real one, covering
-[log-analyzer](https://github.com/Siddique-12300983/log-analyzer),
-[persistwatch](https://github.com/Siddique-12300983/persistwatch),
-[phishing-email-analyzer](https://github.com/Siddique-12300983/phishing-email-analyzer),
-[file-integrity-monitor](https://github.com/Siddique-12300983/file-integrity-monitor)
+[log-analyzer](https://github.com/ruxchipher/log-analyzer),
+[persistwatch](https://github.com/ruxchipher/persistwatch),
+[phishing-email-analyzer](https://github.com/ruxchipher/phishing-email-analyzer),
+[file-integrity-monitor](https://github.com/ruxchipher/file-integrity-monitor)
 and the detections I confirmed by hand in my
-[AD lab](https://github.com/Siddique-12300983/purple-team-journey).
+[AD lab](https://github.com/ruxchipher/purple-team-journey).
 
 Prevention and enrichment tools are deliberately **not** in it.
-[linux-hardening-script](https://github.com/Siddique-12300983/linux-hardening-script)
+[linux-hardening-script](https://github.com/ruxchipher/linux-hardening-script)
 stops things and
-[ioc-extractor](https://github.com/Siddique-12300983/ioc-extractor) enriches
+[ioc-extractor](https://github.com/ruxchipher/ioc-extractor) enriches
 things. Neither detects anything, and counting them would inflate the map.
 
 ## About the YAML reader
@@ -270,10 +270,10 @@ Worth being blunt about, because coverage maps are easy to misread.
 
 ## Related repos
 
-- [sigma-detection-rules](https://github.com/Siddique-12300983/sigma-detection-rules) - the Sigma rules this reads
-- [log-analyzer](https://github.com/Siddique-12300983/log-analyzer) - brute force and Kerberoasting in auth logs
-- [persistwatch](https://github.com/Siddique-12300983/persistwatch) - systemd persistence hunting
-- [purple-team-journey](https://github.com/Siddique-12300983/purple-team-journey) - the AD lab all of it came from
+- [sigma-detection-rules](https://github.com/ruxchipher/sigma-detection-rules) - the Sigma rules this reads
+- [log-analyzer](https://github.com/ruxchipher/log-analyzer) - brute force and Kerberoasting in auth logs
+- [persistwatch](https://github.com/ruxchipher/persistwatch) - systemd persistence hunting
+- [purple-team-journey](https://github.com/ruxchipher/purple-team-journey) - the AD lab all of it came from
 
 ## License
 
@@ -284,5 +284,5 @@ MIT. See [LICENSE](LICENSE).
 Built by **ruxchipher** (Md Abu Bakar Siddique), second-year cyber security
 student working toward a purple team role.
 [ruxchipher.com](https://ruxchipher.com) ·
-[GitHub](https://github.com/Siddique-12300983) ·
+[GitHub](https://github.com/ruxchipher) ·
 [LinkedIn](https://linkedin.com/in/siddiqueabu)
